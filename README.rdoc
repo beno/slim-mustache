@@ -2,10 +2,10 @@
 
 Adding mustache/handlebars support to slim.
 
-```ruby
+    ```ruby
     gem "slim-mustache"
 
-```ruby
+    ```ruby
 		require "slim/mustache"
 
     ~#products                   # {{#products}}name: {{name}}, price: {{price}}{{/products}}
