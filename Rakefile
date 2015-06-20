@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "slim-mustache"
   gem.homepage = "http://github.com/beno/slim-mustache"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{mustache/handlebars support for slim}
+  gem.description = %Q{use a ~tilde to generate \{\{mustache\}\} syntax}
   gem.email = "michelbenevento@yahoo.com"
   gem.authors = ["Michel Benevento"]
+  gem.version = "1.0.0"
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -28,7 +29,7 @@ Jeweler::RubygemsDotOrgTasks.new
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
+  test.pattern = 'test/test_*.rb'
   test.verbose = true
 end
 
