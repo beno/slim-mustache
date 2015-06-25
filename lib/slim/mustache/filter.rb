@@ -18,7 +18,12 @@ module Slim
 		      	matches.each do |first, prefix, text, clean_text, _, last|
 			      	prefix = "#{prefix} " if prefix
 			      	text = clean_text if clean_text
-			      	stack << [:multi, [:static, "{{#{prefix}"], [:slim, :interpolate, text], [:static, "}}"], [:slim, :interpolate, last]]
+			      	stack << [:multi, 
+    			      	[:slim, :interpolate, first],
+  			      	  [:static, "{{#{prefix}"],
+  			      	  [:slim, :interpolate, text],
+  			      	  [:static, "}}"],
+  			      	  [:slim, :interpolate, last]]
 					end
 					stack
         else

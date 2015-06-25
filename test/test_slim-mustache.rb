@@ -17,6 +17,13 @@ class TestSlimMustache < TestSlim
         assert_html '{{foo}} bar {{baz}}', source
   end
   
+  def test_line_deep
+    source = %q{
+h2 some more ~foo
+  }
+    assert_html '<h2>some more {{foo}}</h2>', source
+  end
+  
   def test_dots
             source = %q{
 ~foo.bar. baz
