@@ -31,6 +31,13 @@ h2 some more ~foo
     assert_html '{{foo.bar}}. baz', source
   end
   
+  def test_single_dots
+              source = %q{
+| foo ~. bar
+        }
+      assert_html 'foo {{.}} bar', source
+    end
+  
   def test_dots_section
               source = %q{
 ~#if user.active

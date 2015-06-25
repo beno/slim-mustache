@@ -12,7 +12,7 @@ module Slim
       end
       
       def on_slim_interpolate(string)
-	      	matches = string.scan(/([^~]*)~([!>])?(\((.*)\)|([^ ]*[\w}]))([^~]*)/)
+	      	matches = string.scan(/([^~]*)~([!>])?(\((.*)\)|([^ ]*[\w}])|\.)([^~]*)/)
 	      	if matches.any?
 		      	stack = [:multi]
 		      	matches.each do |first, prefix, text, clean_text, _, last|
