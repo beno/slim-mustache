@@ -21,7 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{use a ~tilde to generate \{\{mustache\}\} syntax}
   gem.email = "michelbenevento@yahoo.com"
   gem.authors = ["Michel Benevento"]
-  gem.version = "1.0.0"
+  gem.version = "1.0.1"
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
